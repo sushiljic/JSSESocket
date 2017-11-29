@@ -8,7 +8,7 @@ public class Spoker {
 
     /**
      * The main method.
-     * Usage: $java -jar SSLPoker.jar <host> <port>
+     * Usage: $java -jar SSLPoker.jar <host> <port> <cipherEnable 1 or 0>
      *
      * @param args the arguments
      */
@@ -16,8 +16,8 @@ public class Spoker {
         String host;
         Integer port;
         Integer cipherEnable = 0;
-        if (args.length != 2) {
-            System.out.println("Usage: " + Spoker.class.getName() + " <host> <port>");
+        if (args.length < 3) {
+            System.out.println("Usage: " + Spoker.class.getName() + " <host> <port> <cipherEnable 1 or 0>");
             //System.exit(1);
             host= "www.google.com";
             port = 443;
@@ -51,6 +51,7 @@ public class Spoker {
             PrintWriter pOut= new PrintWriter(out,false);
             pOut.print("GET / HTTP/1.0");
             pOut.flush();
+
 
             InputStream in = sslsocket.getInputStream();
             InputStreamReader inr = new InputStreamReader(in);
