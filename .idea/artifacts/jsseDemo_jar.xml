@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="jsseDemo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/jsseDemo_jar</output-path>
+    <root id="archive" name="jsseDemo.jar">
+      <element id="module-output" name="jsseDemo" />
+    </root>
+  </artifact>
+</component>
